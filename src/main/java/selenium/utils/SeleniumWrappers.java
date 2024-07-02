@@ -20,6 +20,20 @@ public class SeleniumWrappers extends BaseTest{
 	//Weblement element = driver.findElement(locator);
 	//element.click();
 	
+	public String getElementText(WebElement element) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOf(element));
+			return element.getText();
+			
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+			throw new TestException
+			("failed method <getElementText> on element " + element);
+		}
+	}
+	
+	
 	public boolean isElementDisplayed(WebElement element) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration. ofSeconds(5));

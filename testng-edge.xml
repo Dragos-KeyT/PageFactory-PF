@@ -3,7 +3,7 @@
     <test name="test" >
     	
     	<parameter name ="appUrl" value="https://keyfood.ro/" />
-        <parameter name ="browser" value="firefox" />
+        <parameter name ="browser" value="edge" />
     
         <classes>
             <class name="tests.ContactFormTest" ></class> 

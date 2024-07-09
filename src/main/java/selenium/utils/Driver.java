@@ -2,6 +2,7 @@ package selenium.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
@@ -22,10 +23,13 @@ public class Driver {
 		}else if(browser.equalsIgnoreCase("firefox")) {
 			driver.set(new FirefoxDriver());
 			driver.get();
+		
+		}else if(browser.equalsIgnoreCase("edge")) {
+			
+			driver.set(new EdgeDriver());
+			driver.get();
 		}
-		
-		
-		
+			
 		
 		return driver.get();
 	} 
